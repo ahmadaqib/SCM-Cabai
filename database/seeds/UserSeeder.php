@@ -1,10 +1,12 @@
 <?php
+namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\User;
 use App\Lokasi;
 use App\Inventaris;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -15,8 +17,9 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $daerah = array("KABUPATEN BOGOR","KABUPATEN SUKABUMI","KABUPATEN CIANJUR","KABUPATEN BANDUNG","KABUPATEN GARUT","KABUPATEN TASIKMALAYA","KABUPATEN CIAMIS","KABUPATEN KUNINGAN","KABUPATEN CIREBON","KABUPATEN MAJALENGKA","KABUPATEN SUMEDANG","KABUPATEN INDRAMAYU","KABUPATEN SUBANG","KABUPATEN PURWAKARTA","KABUPATEN KARAWANG","KABUPATEN BEKASI","KABUPATEN BANDUNG BARAT","KABUPATEN PANGANDARAN","KOTA BOGOR","KOTA SUKABUMI","KOTA BANDUNG","KOTA CIREBON","KOTA BEKASI","KOTA DEPOK","KOTA CIMAHI","KOTA TASIKMALAYA","KOTA BANJAR");
-        $roleName = array("PRODUSEN", "PENGEPUL", "GROSIR","PENGECER","KONSUMEN");
+        $daerah = array("KABUPATEN GOWA","KABUPATEN MAROS","KABUPATEN PANGKEP","KABUPATEN BARRU","KABUPATEN BONE","KABUPATEN SINJAI","KABUPATEN BULUKUMBA","KABUPATEN WAJO","KABUPATEN SIDENRENG RAPPANG","KABUPATEN PINRANG","KABUPATEN ENREKANG","KABUPATEN LUWU","KABUPATEN TANA TORAJA","KABUPATEN LUWU UTARA","KABUPATEN LUWU TIMUR","KABUPATEN TORAJA UTARA","KABUPATEN KEPULAUAN SELAYAR","KOTA MAKASSAR","KOTA PAREPARE","KOTA PALOPO");
+        
+        $roleName = array("ADMIN", "PRODUSEN", "PENGEPUL", "GROSIR","PENGECER","KONSUMEN");
 
         for ($i=1;$i<=2;$i++){
             foreach ($daerah as $kab){
@@ -28,18 +31,22 @@ class UserSeeder extends Seeder
                 $nameKab = $sub1."_".$sub2;
                 
                 for ($r=1; $r<=count($roleName); $r++){
-                // User
-                    $user = new User;
-                    // ex = PENGEPUL KAB BOGOR 1
-                    $user->name = $roleName[$r-1]." ".$kab." ".$i;
-                    // ex = pengepul_kab_bogor_1@test.com
-                    $user->email = strtolower($roleName[$r-1])."_".strtolower($nameKab)."_".$i."@test.com";
-                    $user->password = Hash::make('asd');
-                    $user->role = $r+1;
-                    $user->status = 1;
-                    $user->fotosk = Str::random(5);
-                    $user->save();
-
+                
+            
+                
+                
+                $user = new User;
+                // ex = PENGEPUL KAB BOGOR 1
+                $user->name = $roleName[$r-1]." ".$kab." ".$i;
+                // ex = pengepul_kab_bogor_1@test.com
+                $user->email = strtolower($roleName[$r-1])."_".strtolower($nameKab)."_".$i."@test.com";
+                $user->password = Hash::make('asd');
+                $user->role= $r; // assign role ID based on the index of the roleName array
+                $user->status = 1;
+                $user->fotosk = Str::random(5);
+                $user->name = strtolower($roleName[$r-1])."_".strtolower($nameKab)."_".$i;
+                $user->save();
+            
                 // Lokasi
                     $lokasi = new Lokasi([
                         'kabupaten' => $kab,

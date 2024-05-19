@@ -1,10 +1,11 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\User;
 use App\Lokasi;
 use App\Inventaris;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,10 +16,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([
-            KabupatenSeeder::class,
-            UserSeeder::class,
-        ]);
+        
+        
+$this->call([
+    KabupatenSeeder::class,
+    UserSeeder::class,
+]);
 
         // $this->call(UsersTableSeeder::class);
         User::create([

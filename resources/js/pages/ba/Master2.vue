@@ -4,7 +4,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="/">CabaiJabar</a></h1>
+      <h1 class="logo mr-auto"><a href="/">CabaiSuryati</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -25,7 +25,7 @@
   <section id="hero" class="d-flex align-items-center">
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 	  <div class="text-center">
-        <h1>CABAI JABAR</h1>
+        <h1>Cabai Suryati</h1>
 		<p class="description">Lorem Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
       </div>
 
@@ -441,11 +441,11 @@
         <div class="row">
 
           <div class="footer-contact">
-            <h3>CabaiJabar</h3>
+            <h3>CabaiSuryati</h3>
             <p>
-              IPB University || Dramaga, Bogor 16680 || Indonesia <br><br>
+              Undipa  || Makassar|| Indonesia <br><br>
               <strong>Phone:</strong> +62 888888888<br>
-              <strong>Email:</strong> info@cabaijabar.xyz<br>
+              <strong>Email:</strong> info@CabaiSuryati.xyz<br>
             </p>
           </div>
         </div>

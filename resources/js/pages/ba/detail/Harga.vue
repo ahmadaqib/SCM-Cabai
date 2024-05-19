@@ -4,7 +4,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
       <h1 class="logo mr-auto">
-        <a href="/">CabaiJabar</a>
+        <a href="/">CabaiSuryati</a>
       </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -28,7 +28,7 @@
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Harga Cabai di Jawa Barat</h2>
+          <h2>Harga Cabai Cabai Suryati</h2>
           <ol>
             <li>
               <a href="index.html">Home</a>

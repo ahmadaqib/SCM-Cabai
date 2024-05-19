@@ -132,7 +132,7 @@
     <router-view></router-view>
     <footer class="main-footer">
       <strong>
-        Copyright &copy; 2014-2019
+        Copyright &copy; 2024
         <a href="http://adminlte.io">AdminLTE.io</a>.
       </strong>
       All rights reserved.
